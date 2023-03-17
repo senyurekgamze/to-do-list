@@ -1,38 +1,135 @@
-.App {
+* {
+  box-sizing: border-box;
+  box-shadow: inset;
+  margin: 0px auto;
+  padding: 0px auto;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+  border: 2px solid #453c67;
+  margin: 30px auto;
+  margin-top: 80px;
+  max-width: 650px;
+}
+
+.todo-app {
+  background: white;
   text-align: center;
+  margin: 10px auto;
+  border-radius: 10px;
+  padding-bottom: 32px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  color: #453c67;
+  font-size: 24px;
+  text-align: center;
+  margin: 30px auto;
+  padding: 10px auto;
+  background: white;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h4 {
+  color: #453c67;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  font-style: italic;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.complete {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.todo-form {
+  margin: 30px auto;
+  background: white;
+}
+
+.todo-input {
+  margin: 30px auto;
+  margin-left: 140px;
+  padding: 14px 32px 14px 16px;
+  width: 320px;
+  border-radius: 4px 0 0 4px;
+  border: 2px solid #46c2cb;
+  outline: none;
+  background: white;
+  color: #453c67;
+}
+
+.todo-input::placeholder {
+  color: #453c67;
+}
+
+.todo-button {
+  padding: 16px;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  outline: none;
+  background: #46c2cb;
+  color: #453c67;
+  text-transform: capitalize;
+}
+
+.todo-input.edit {
+  border: 2px solid #149fff;
+}
+
+.todo-button.edit {
+  padding: 16px 22px;
+}
+
+.todo-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  position: relative;
+  background: white;
+}
+
+.todo-row {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 2px auto;
+  color: #453c67;
+  padding: 16px;
+  border-radius: 5px;
+  width: 80%;
 }
 
-.App-link {
-  color: #61dafb;
+.todo-row:nth-child(4n + 1) {
+  background: #6d67e4;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todo-row:nth-child(4n + 2) {
+  background: #46c2cb;
+}
+
+.todo-row:nth-child(4n + 3) {
+  background: #d27685;
+}
+
+.todo-row:nth-child(4n + 4) {
+  background: #f2f7a1;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.delete-icon {
+  margin-right: 5px;
+  color: #453c67;
+}
+
+.edit-icon {
+  color: #453c67;
 }
